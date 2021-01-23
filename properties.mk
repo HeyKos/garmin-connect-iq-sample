@@ -1,4 +1,4 @@
-DEVICE = fenix5s
-SDK_HOME = /Users/daniel.siwiec/connectiq-sdk-mac-3.0.4
+DEVICE = vivoactive3m
+SDK_HOME = "/Users/mikekoser/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk"
 DEPLOY = /Volumes/GARMIN/GARMIN/APPS/
-PRIVATE_KEY = /Users/daniel.siwiec/.ssh/id_rsa_garmin.der
+PRIVATE_KEY = developer_key.der
