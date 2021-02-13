@@ -1,0 +1,4 @@
+<layout id="ParticipationButtonLayout">
+    <drawable id="participationButton"/>
+    <label text="@Strings.OptInText" x="center" y="center" justification="Graphics.TEXT_JUSTIFY_CENTER"></label> 
+</layout>

@@ -6,7 +6,7 @@
 
 using Toybox.Application;
 
-class NumberPickerApp extends Application.AppBase {
+class ParticipationApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -22,7 +22,7 @@ class NumberPickerApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new NumberPickerView(), new BaseInputDelegate() ];
+        return [ new ParticipationView() ];
     }
 
 }
