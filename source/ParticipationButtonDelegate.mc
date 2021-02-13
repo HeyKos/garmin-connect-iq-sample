@@ -6,9 +6,16 @@ using Toybox.Communications;
 class ParticipationButtonDelegate extends WatchUi.InputDelegate {
     var _url;
 
-	function initialize() {
+	function initialize(userId) {
         InputDelegate.initialize();
-        _url = App.loadResource(Rez.Strings.APIUrl);
+        var baseUrl = App.loadResource(Rez.Strings.APIUrl);
+        var lastIndex = baseUrl.length() - 1;
+        var lastCharacter = baseUrl.substring(lastIndex, lastIndex);
+        if (lastCharacter != "/") {
+            baseUrl = baseUrl + "/";
+        }
+        _url = baseUrl + userId;
+        System.println("ParticipationButtonDelegate._url: " + _url);
     }
 
     function onReceive(responseCode, data) {

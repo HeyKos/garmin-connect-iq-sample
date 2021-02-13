@@ -1,4 +1,5 @@
 using Toybox.Application;
+using Toybox.WatchUi;
 
 class ParticipationApp extends Application.AppBase {
 
@@ -6,17 +7,18 @@ class ParticipationApp extends Application.AppBase {
         AppBase.initialize();
     }
 
-    // onStart() is called on application start up
     function onStart(state) {
     }
 
-    // onStop() is called when your application is exiting
     function onStop(state) {
     }
 
-    // Return the initial view of your application here
     function getInitialView() {
-        return [ new ParticipationView(), new ParticipationButtonDelegate() ];
+        var userId = Application.Properties.getValue("trainBeersUserId");
+        return [ new ParticipationView(), new ParticipationButtonDelegate(userId) ];
     }
 
+    function onSettingsChanged() {
+        WatchUi.requestUpdate();
+    }
 }

@@ -1,4 +1,5 @@
 <strings>
     <string id="AppName">Train Beers Participation</string>
     <string id="OptInText">I'm In</string>
+    <string id="UserIdSettingLabel">Train Beer User Id</string>
 </strings>
