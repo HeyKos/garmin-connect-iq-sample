@@ -1,9 +1,3 @@
-//
-// Copyright 2015-2016 by Garmin Ltd. or its subsidiaries.
-// Subject to Garmin SDK License Agreement and Wearables
-// Application Developer Agreement.
-//
-
 using Toybox.Application;
 
 class ParticipationApp extends Application.AppBase {
@@ -22,7 +16,7 @@ class ParticipationApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new ParticipationView() ];
+        return [ new ParticipationView(), new ParticipationButtonDelegate() ];
     }
 
 }
