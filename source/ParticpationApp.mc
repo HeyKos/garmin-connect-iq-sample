@@ -20,12 +20,6 @@ class ParticipationApp extends Application.AppBase {
     // -------------------------------------
     // Event Handlers
     // -------------------------------------
-    function onStart(state) {
-    }
-
-    function onStop(state) {
-    }
-
     function onSettingsChanged() {
         WatchUi.requestUpdate();
     }
