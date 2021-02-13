@@ -1,5 +1,4 @@
-using Toybox.Application as App;
-using Toybox.System;
+using Toybox.Application;
 using Toybox.WatchUi;
 using Toybox.Communications;
 
@@ -39,7 +38,6 @@ class ParticipationButtonDelegate extends WatchUi.InputDelegate {
            :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
         };
 
-        System.println("url:" + _url);
         Communications.makeWebRequest(_url, null, options, method(:onReceive));
 
         var progressBar = new WatchUi.ProgressBar(
@@ -58,7 +56,7 @@ class ParticipationButtonDelegate extends WatchUi.InputDelegate {
     // Private Functions
     //--------------------------------------
     function getUrl(userId) {
-        var baseUrl = App.loadResource(Rez.Strings.APIUrl);
+        var baseUrl = Application.loadResource(Rez.Strings.APIUrl);
         var lastIndex = baseUrl.length() - 1;
         var lastCharacter = baseUrl.substring(lastIndex, lastIndex);
         if (lastCharacter != "/") {
