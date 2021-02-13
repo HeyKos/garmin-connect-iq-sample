@@ -4,11 +4,11 @@ using Toybox.WatchUi;
 using Toybox.Communications;
 
 class ParticipationButtonDelegate extends WatchUi.InputDelegate {
-    // TODO: This is eventually changed to pull from a setting.
-	const URL = "https://api.openbrewerydb.org/breweries/5494";
+    var _url;
 
 	function initialize() {
         InputDelegate.initialize();
+        _url = App.loadResource(Rez.Strings.APIUrl);
     }
 
     function onReceive(responseCode, data) {
@@ -32,10 +32,10 @@ class ParticipationButtonDelegate extends WatchUi.InputDelegate {
            :headers => {
                 "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
             },
-           :responseType =>  Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+           :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
         };
 
-        Communications.makeWebRequest(URL, null, options, method(:onReceive));
+        Communications.makeWebRequest(_url, null, options, method(:onReceive));
 
         var progressBar = new WatchUi.ProgressBar(
             "sending...",
