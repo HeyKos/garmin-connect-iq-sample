@@ -2,7 +2,6 @@ using Toybox.Application;
 using Toybox.WatchUi;
 
 class ParticipationApp extends Application.AppBase {
-
     function initialize() {
         AppBase.initialize();
     }

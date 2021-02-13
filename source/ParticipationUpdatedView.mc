@@ -11,7 +11,6 @@ class ParticipationUpdatedView extends WatchUi.View {
     }
 
     function onLayout(dc) {
-        System.println("We're in the ParticipationUpdatedView.onLayout function");
         setLayout(Rez.Layouts.ParticipationUpdatedLayout(dc));
         var view = View.findDrawableById("message");
 		view.setText(_message);
@@ -21,7 +20,6 @@ class ParticipationUpdatedView extends WatchUi.View {
     }
 
     function onUpdate(dc) {
-        System.println("We're in the ParticipationUpdatedView.onUpdate function");
         View.onUpdate(dc);
     }
 

@@ -8,7 +8,6 @@ class ParticipatonUpdatedDelegate extends WatchUi.InputDelegate {
     }
 
 	function onTap(clickEvent) {
-		System.println("We're in the ParticipatonUpdatedDelegate.onTap function");
 		WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
 	}
 }

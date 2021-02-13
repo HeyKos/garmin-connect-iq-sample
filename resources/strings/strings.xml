@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Train Beers Participation</string>
+    <string id="AppName">Train Beers</string>
     <string id="OptInText">I'm In</string>
-    <string id="UserIdSettingLabel">Train Beer User Id</string>
+    <string id="UserIdSettingLabel">Train Beers User Id</string>
 </strings>
