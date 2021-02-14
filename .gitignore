@@ -1,3 +1,4 @@
 bin/
+properties.mk
 developer_key.*
 resources/strings/private-settings.xml

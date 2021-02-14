@@ -1,0 +1,4 @@
+DEVICE = vivoactive3
+SDK_HOME = "/Users/username/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk"
+DEPLOY = /Volumes/GARMIN/GARMIN/APPS/
+PRIVATE_KEY = /home/.ssh/key/id_rsa_garmin.der
